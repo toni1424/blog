@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    {{ article.title}}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ article.title }}</h1>
+    <div class="post-time" align="right"> <em>Дата публикации: {{ article.datetime }}</em></div>
+    {{ article.text }}
+    {{ article.username }}
+   <!-- <div align="right" class="main-footer"><em><a href="/"> На главную</a></em></div> -->
+ <div align="right"><a href="/" class="btn btn-default" role="button" >На главную</a></div>
+{% endblock %}
+

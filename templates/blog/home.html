@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block content %}
+    <h1>Главная</h1>
+    {% for article in articles %}
+        <h4><a href="{% url 'article' article.id %}"> {{ article.title }}</a></h4>
+        <div class="post_time" align="right"> <em>Дата публикации: {{ article.datetime }}</em></div>
+       <table class="table table-inverse"><pre>{{ article.get_short_text }}...</pre></table>
+
+       <!-- <div align="right" class="main-footer"><em><a href="{% url 'article' article.id %}"> Подробнее..</a></em></div> -->
+        <div align="right"><a href="{% url 'article' article.id %}" class="btn btn-default" role="button" >Подробнее..</a></div>
+    {% endfor %}
+{% endblock %}

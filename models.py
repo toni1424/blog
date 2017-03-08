@@ -1,10 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
-# from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-# from django.views.generic.list import ListView
 
 SHORT_TEXT_LEN = 600
-
 
 class Article(models.Model):
     title = models.CharField(max_length=200)

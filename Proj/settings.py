@@ -25,7 +25,7 @@ SECRET_KEY = 'r2u8+g-82ve+4re0f5&yzudfttnn8jnrffm&&m-iew#r1j9(et'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["46.101.120.65"]
 
 
 # Application definition
@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'blog',
-    'disqus',
+    'blog'
 ]
 SITE_ID = 1
 
@@ -124,5 +123,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-DISQUS_API_KEY = ''
-DISQUS_WEBSITE_SHORTNAME = ''

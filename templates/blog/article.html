@@ -5,11 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ article.title }}</h1>
-    <div class="post-time" align="right"> <em>Дата публикации: {{ article.datetime }}</em></div>
-    {{ article.text }}
+    <h3>{{ article.title }}</h3>
+    <blockquote class="blockquote">{{ article.text|safe }}</blockquote>
     {{ article.username }}
-   <!-- <div align="right" class="main-footer"><em><a href="/"> На главную</a></em></div> -->
- <div align="right"><a href="/" class="btn btn-default" role="button" >На главную</a></div>
+           <hr>
+       <p class="post-meta" align="right"><em>Дата публикации: {{ article.datetime }}</em></p>
+
+   <!-- <div align="right" class="main-footer"><em><a href="/"> На главную</a></em></div> 
+ <div align="right"><a href="/" class="btn btn-default" role="button" >На главную</a></div>-->
 {% endblock %}
 
